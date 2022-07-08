@@ -7,7 +7,6 @@ gem "roxml"
 
 gem "activesupport", "~> 7"
 
-
 group :development, :test do
   gem "rspec"
 
