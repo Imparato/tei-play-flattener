@@ -1,0 +1,286 @@
+<?xml version="1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/TEIC/TEI-Simple/master/teisimple.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Macbeth</title>
+        <author>William Shakespeare</author>
+        <editor xml:id="BAM">Barbara A. Mowat</editor>
+        <editor xml:id="PW">Paul Werstine</editor>
+        <respStmt>
+          <resp>Encoded in TEI Simple by</resp>
+          <name xml:id="MM">Martin Mueller</name>
+          <name xml:id="MSP">Michael Poston</name>
+        </respStmt>
+        <respStmt>
+          <resp>Linguistically annotated with MorphAdorner by</resp>
+          <name>Philip R. Burns</name>
+          <name>Martin Mueller</name>
+        </respStmt>
+      </titleStmt>
+      <editionStmt>
+        <edition n="0.5">An early release. Some encoding choices remain to be refined or extended.</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>The Folger Shakespeare (formerly Folger Digital Texts)</publisher>
+        <idno>Mac</idno>
+        <address>
+          <addrLine>https://shakespeare.folger.edu/</addrLine>
+        </address>
+        <availability>
+          <licence target="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Distributed under a Creative Commons Attribution-NonCommercial 3.0 Unported License</licence>
+        </availability>
+        <date>February, 2017</date>
+      </publicationStmt>
+      <sourceDesc>
+        <biblFull>
+          <titleStmt>
+            <title>Macbeth</title>
+            <author>William Shakespeare</author>
+            <editor>Barbara A. Mowat</editor>
+            <editor>Paul Werstine</editor>
+            <respStmt>
+              <resp>Edited for XML and encoded by</resp>
+              <name>Michael Poston</name>
+              <name>Rebecca Niles</name>
+            </respStmt>
+          </titleStmt>
+          <editionStmt>
+            <edition n="0.5">An early release. Some encoding choices remain to be refined or extended.</edition>
+          </editionStmt>
+          <publicationStmt>
+            <publisher>Folger Shakespeare Library</publisher>
+            <idno>Mac</idno>
+            <address>
+              <addrLine>201 East Capitol Street, SE</addrLine>
+              <addrLine>Washington, DC 20003</addrLine>
+              <addrLine>https://shakespeare.folger.edu/</addrLine>
+            </address>
+            <availability>
+              <licence target="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Distributed under a Creative Commons Attribution-NonCommercial 3.0 Unported License</licence>
+            </availability>
+            <date>April, 2015</date>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>This version of The Folger Shakespeare (formerly Folger Digital Texts) uses TEI Simple to encode the Shakespeare texts edited by Barbara Mowat and Paul Werstine.  The major goal of recasting the texts in this manner is to make them interoperable with a large corpus of early modern texts derived from the EEBO-TCP transcriptions and encoded in TEI Simple with linguistic annotation.</p>
+        <p>For a full description of the encoding practices of The Folger Shakespeare consult their <gi>encodingDesc</gi> section. This version is completely faithful to the readings, orthogrgraphy, and punctuation of the source text. It uses a different XML encoding scheme, with occasional losses in expressiveness. The major differences are: 
+        <list><item>Number <gi>div</gi> are replaced by unnumbered divs</item><item>Lines of verse are marked in <gi>l</gi>, tags, lines of prose in <gi>ab</gi></item><item>All xml:ids are corpuswide identifiers</item><item>Information from the participant description element <gi>particDesc</gi> in the teiHeader has been moved into  a <gi>castList</gi> element in the <gi>front</gi> element</item><item>Each spoken word in the text has been linguistically annotated with a lemma and POS tag</item></list>
+      </p>
+      </projectDesc>
+      <refsDecl>
+        <p>Words, spaces, and punctuation characters are numbered sequentially, incremented by 10.</p>
+        <p>Most other elements begin with an element-specific prefix, followed by a reference to the Folger Through Line Number, a sequential numbering of the numbered lines in the text. If an element is inline with play text, it has the same line number as the line where it begins. If it begins on a line following play text, a decimal number is appended and incremented as necessary. If it falls between a speech prefix and the play text, a ".0" is appended to the value of the following line number.</p>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="en">English</language>
+        <language ident="fr">French</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <front>
+      <castList xmlns="http://www.tei-c.org/ns/1.0">
+        <castGroup>
+          <castItem xml:id="WITCHES_Mac">Three Witches, the We&#xEF;rd Sisters</castItem>
+          <castItem xml:id="WITCHES.1_Mac" corresp="#WITCHES_Mac"/>
+          <castItem xml:id="WITCHES.2_Mac" corresp="#WITCHES_Mac"/>
+          <castItem xml:id="WITCHES.3_Mac" corresp="#WITCHES_Mac"/>
+        </castGroup>
+        <castGroup>
+          <castItem xml:id="Duncan_Mac">
+            <role>
+              <name>Duncan</name>
+            </role>
+            <roleDesc>king of Scotland</roleDesc>
+          </castItem>
+          <castItem xml:id="Malcolm_Mac">
+            <role>
+              <name>Malcolm</name>
+            </role>
+            <roleDesc><rs ref="#Duncan_Mac">his</rs>
+            elder son
+          </roleDesc>
+          </castItem>
+          <castItem xml:id="Donalbain_Mac">
+            <role>
+              <name>Donalbain</name>
+            </role>
+            <roleDesc>Duncan&#x2019;s younger son</roleDesc>
+          </castItem>
+        </castGroup>
+        <castGroup>
+          <castItem xml:id="Macbeth_Mac">
+            <role>
+              <name>Macbeth</name>
+            </role>
+            <roleDesc>thane of Glamis</roleDesc>
+          </castItem>
+          <castItem xml:id="LadyMacbeth_Mac">
+            <role>
+              <name>Lady Macbeth</name>
+            </role>
+          </castItem>
+          <castItem xml:id="Seyton_Mac">
+            <role>
+              <name>Seyton</name>
+            </role>
+            <roleDesc>attendant to Macbeth</roleDesc>
+          </castItem>
+          <castItem xml:id="MURDERERS_Mac">Three Murderers in Macbeth&#x2019;s service</castItem>
+          <castItem xml:id="MURDERERS.0.1_Mac" corresp="#MURDERERS_Mac"/>
+          <castItem xml:id="MURDERERS.1_Mac" corresp="#MURDERERS_Mac"/>
+          <castItem xml:id="MURDERERS.2_Mac" corresp="#MURDERERS_Mac"/>
+          <castItem xml:id="MURDERERS.3_Mac" corresp="#MURDERERS_Mac"/>
+          <castGroup>
+            <head>both attending upon Lady Macbeth</head>
+            <castItem xml:id="Doctor2_Mac">
+              <role>A Doctor</role>
+            </castItem>
+            <castItem xml:id="Gentlewoman_Mac">
+              <role>A Gentlewoman</role>
+            </castItem>
+          </castGroup>
+          <castItem xml:id="Porter_Mac">
+            <role>A Porter</role>
+          </castItem>
+        </castGroup>
+        <castGroup>
+          <castItem xml:id="Banquo_Mac">
+            <role>
+              <name>Banquo</name>
+            </role>
+            <roleDesc>commander, with Macbeth, of Duncan&#x2019;s army</roleDesc>
+          </castItem>
+          <castItem xml:id="Fleance_Mac">
+            <role>
+              <name>Fleance</name>
+            </role>
+            <roleDesc><rs ref="#Banquo_Mac">his</rs>
+            son
+          </roleDesc>
+          </castItem>
+        </castGroup>
+        <castGroup>
+          <castItem xml:id="Macduff_Mac">
+            <role>
+              <name>Macduff</name>
+            </role>
+            <roleDesc>a Scottish noble</roleDesc>
+          </castItem>
+          <castItem xml:id="LadyMacduff_Mac">
+            <role>
+              <name>Lady Macduff</name>
+            </role>
+          </castItem>
+          <castItem xml:id="MacduffsSon_Mac">
+            <role><rs ref="#Macduff_Mac #LadyMacduff_Mac">Their</rs>
+            son
+          </role>
+          </castItem>
+        </castGroup>
+        <castGroup>
+          <castGroup>
+            <head>Scottish Nobles</head>
+            <castItem xml:id="Lennox_Mac">
+              <role>
+                <name>Lennox</name>
+              </role>
+            </castItem>
+            <castItem xml:id="Ross_Mac">
+              <role>
+                <name>Ross</name>
+              </role>
+            </castItem>
+            <castItem xml:id="Angus_Mac">
+              <role>
+                <name>Angus</name>
+              </role>
+            </castItem>
+            <castItem xml:id="Menteith_Mac">
+              <role>
+                <name>Menteith</name>
+              </role>
+            </castItem>
+            <castItem xml:id="Caithness_Mac">
+              <role>
+                <name>Caithness</name>
+              </role>
+            </castItem>
+          </castGroup>
+        </castGroup>
+        <castGroup>
+          <castItem xml:id="Siward_Mac">
+            <role>
+              <name>Siward</name>
+            </role>
+            <roleDesc>commander of the English forces</roleDesc>
+          </castItem>
+          <castItem xml:id="YoungSiward_Mac">
+            <role>
+              <name>Young Siward</name>
+            </role>
+            <roleDesc>Siward&#x2019;s son</roleDesc>
+          </castItem>
+        </castGroup>
+        <castGroup>
+          <castItem xml:id="SOLDIERS.Captain_Mac" corresp="#SOLDIERS_Mac">
+            <role>A Captain in Duncan&#x2019;s army</role>
+          </castItem>
+          <castItem xml:id="OldMan_Mac">
+            <role>An Old Man</role>
+          </castItem>
+          <castItem xml:id="Doctor1_Mac">
+            <role>A Doctor at the English court</role>
+          </castItem>
+        </castGroup>
+        <castGroup>
+          <castItem xml:id="Hecate_Mac">
+            <role>
+              <name>Hecate</name>
+            </role>
+          </castItem>
+          <castItem xml:id="SPIRITS_Mac">
+          Apparitions: an Armed Head, a Bloody Child, a Crowned Child,and eight nonspeaking kings
+        </castItem>
+          <castItem xml:id="SPIRITS.1_Mac" corresp="#SPIRITS_Mac"/>
+          <castItem xml:id="SPIRITS.2_Mac" corresp="#SPIRITS_Mac"/>
+          <castItem xml:id="SPIRITS.3_Mac" corresp="#SPIRITS_Mac"/>
+          <castItem xml:id="SPIRITS.KINGS_Mac" corresp="#SPIRITS_Mac"/>
+        </castGroup>
+        <castGroup>
+          <head>
+          Three Messengers, Three Servants, a Lord, a Soldier
+        </head>
+          <castItem xml:id="MESSENGERS_Mac"/>
+          <castItem xml:id="MESSENGERS.1_Mac" corresp="#MESSENGERS_Mac"/>
+          <castItem xml:id="MESSENGERS.2_Mac" corresp="#MESSENGERS_Mac"/>
+          <castItem xml:id="MESSENGERS.3_Mac" corresp="#MESSENGERS_Mac"/>
+          <castItem xml:id="SERVANTS_Mac"/>
+          <castItem xml:id="SERVANTS.X.1_Mac" corresp="#SERVANTS_Mac"/>
+          <castItem xml:id="SERVANTS.X.2_Mac" corresp="#SERVANTS_Mac"/>
+          <castItem xml:id="SERVANTS.X.3_Mac" corresp="#SERVANTS_Mac"/>
+          <castItem xml:id="SERVANTS.X.4_Mac" corresp="#SERVANTS_Mac"/>
+          <castItem xml:id="Lord_Mac"/>
+          <castItem xml:id="SOLDIERS.MALCOLM.0.1_Mac" corresp="#SOLDIERS.MALCOLM_Mac"/>
+        </castGroup>
+        <castGroup>
+          <head>
+          Attendants, a Sewer, Servants, Lords, Thanes, Soldiers (all nonspeaking)
+        </head>
+          <castItem xml:id="ATTENDANTS_Mac"/>
+          <castItem xml:id="ATTENDANTS.0_Mac" corresp="#ATTENDANTS_Mac"/>
+          <castItem xml:id="SOLDIERS_Mac"/>
+          <castItem xml:id="SOLDIERS.MACBETH_Mac" corresp="#SOLDIERS_Mac"/>
+          <castItem xml:id="SOLDIERS.MALCOLM_Mac" corresp="#SOLDIERS_Mac"/>
+        </castGroup>
+      </castList>
+    </front>
+  </text>
+</TEI>
